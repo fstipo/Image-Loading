@@ -14,4 +14,5 @@ function changeTxtColor() {
   console.log(this);
   let temp = this.classList.toggle('red');
   console.log(temp);
+  console.log(this.className);
 }
