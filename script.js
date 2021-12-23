@@ -1,25 +1,17 @@
 // 'use strict';
 
-// children vs. childNodes
-
-const spanEl = document.querySelector('div.pickMe');
-console.log(spanEl);
-console.dir(spanEl.children.length);
-console.dir(spanEl.childNodes.length);
-
-console.log(spanEl.nextElementSibling);
-console.log(spanEl.nextSibling);
-
-console.log(spanEl.parentElement);
-console.log(spanEl.parentNode);
-
-console.log(spanEl.previousElementSibling);
-console.log(spanEl.previousSibling);
-
-// style
+// create DOM elements
+const divEl = document.createElement('div');
+divEl.id = 'myID';
+divEl.style.backgroundColor = 'orange';
+divEl.style['font-size'] = '42px';
+divEl.textContent = 'Hey I am new div';
+document.body.appendChild(divEl);
 const h1 = document.querySelector('h1');
-console.log(h1);
-h1.style.backgroundColor = 'yellow';
-h1.style['text-align'] = 'center';
-h1.style.display = 'none';
-h1.style.display = 'block';
+document.body.insertBefore(divEl, h1);
+const newText = document.createTextNode(' -Help!');
+divEl.appendChild(newText);
+
+document.body.insertAdjacentHTML('afterbegin', divEl);
+
+console.log(divEl);
