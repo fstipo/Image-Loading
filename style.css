@@ -15,3 +15,8 @@ body {
 div {
   text-align: center;
 }
+
+.red {
+  background-color: red;
+  color: white;
+}
