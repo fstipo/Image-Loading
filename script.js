@@ -1,19 +1,17 @@
 // '(use strict';
 
 // Event listeners
-const elementList = document.querySelectorAll('.list-item');
+const elList = document.querySelectorAll('.list-item');
+console.log(elList);
 
-for (let z = 0; z < elementList.length; z++) {
-  console.log(elementList[z]);
-  // elementList[z].style.backgroundColor = 'yellow';
-  elementList[z].style.padding = '14px';
-  elementList[z].addEventListener('click', addRed);
+elList.forEach((el) => {
+  console.log(el);
+  el.style.padding = '12px';
+  el.addEventListener('click', changeTxtColor);
+});
 
-  // elementList[z].addEventListener('click', addRed);
-}
-
-function addRed() {
-  let temp = this.classList.toggle('red');
+function changeTxtColor() {
   console.log(this);
+  let temp = this.classList.toggle('red');
   console.log(temp);
 }

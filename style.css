@@ -15,8 +15,14 @@ body {
 div {
   text-align: center;
 }
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: rgb(21, 201, 102);
+}
 
 .red {
-  background-color: red;
-  color: white;
+  color: red;
+  font-size: 24px;
 }
