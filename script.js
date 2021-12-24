@@ -22,5 +22,9 @@ spanList.forEach((el) => {
       255
     )})`;
     el.style.backgroundColor = temp;
+    el.textContent = `color: ${temp}`;
+    el.style['text-align'] = 'center';
+    el.style.fontWeight = 'bold';
+    el.style.color = 'white';
   });
 });
