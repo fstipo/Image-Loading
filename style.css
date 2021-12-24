@@ -6,31 +6,9 @@
 body {
   margin: 0;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   overflow: hidden;
   height: 100vh;
-}
-div {
-  text-align: center;
-}
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-  /* color: rgb(21, 201, 102); */
-  accent-color: none;
-}
-
-.red {
-  color: red !important;
-  font-size: 24px;
-  width: 150px;
-}
-
-img {
-  /* display: block; */
-  margin-bottom: 150px;
-  border-bottom: 2px solid lime;
 }

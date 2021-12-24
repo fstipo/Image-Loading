@@ -1,26 +1,21 @@
 // '(use strict';
 
-// Event listeners Challenge 1 - pop Up window
+// Event listeners Challenge 2 - add items
+const listItemEl = document.querySelector('ul');
+console.log(listItemEl);
 
-const imgList = document.querySelectorAll('img');
-console.log(imgList);
+const inputEl = document.querySelector('input');
+console.log(inputEl);
 
-// for (let i = 0; i < imgList.length; i++) {
-//   console.log(imgList[i]);
-//   const el = imgList[i];
-//   el.addEventListener('click', resizeImg);
-// }
+const btn = document.querySelector('button');
+console.log(btn);
 
-function resizeImg() {
-  console.log(this);
-  console.log(this.src);
-  window.open(this.src, 'myImg', 'resizable=yes, width=500', 'heigh=500');
-}
+const addListItem = () => {
+  console.log(inputEl.value);
+  const listEl = document.createElement('li');
+  listEl.textContent = inputEl.value;
+  console.log(listEl);
+  listItemEl.appendChild(listEl);
+};
 
-// other version - onClick
-
-for (let i = 0; i < imgList.length; i++) {
-  console.log(imgList[i]);
-  const el = imgList[i];
-  el.onclick = resizeImg;
-}
+btn.addEventListener('click', addListItem);
