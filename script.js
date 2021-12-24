@@ -12,10 +12,12 @@ console.log(btn);
 
 const addListItem = () => {
   console.log(inputEl.value);
-  const listEl = document.createElement('li');
-  listEl.textContent = inputEl.value;
-  console.log(listEl);
-  listItemEl.appendChild(listEl);
+  if (inputEl.value.length > 3) {
+    const listEl = document.createElement('li');
+    listEl.textContent = inputEl.value;
+    console.log(listEl);
+    listItemEl.appendChild(listEl);
+  }
 };
 
 btn.addEventListener('click', addListItem);
