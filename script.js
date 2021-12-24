@@ -1,16 +1,26 @@
 // '(use strict';
 
-// Event listeners
-const elementList = document.querySelectorAll('.list-item');
+// Event listeners Challenge 1 - pop Up window
 
-elementList.forEach((el) => {
-  el.style.padding = '2px';
-  el.style['background-color'] = 'yellow';
-  el.addEventListener('click', bigFont);
-});
+const imgList = document.querySelectorAll('img');
+console.log(imgList);
 
-function bigFont() {
-  const temp = this.classList.toggle('red');
+// for (let i = 0; i < imgList.length; i++) {
+//   console.log(imgList[i]);
+//   const el = imgList[i];
+//   el.addEventListener('click', resizeImg);
+// }
+
+function resizeImg() {
   console.log(this);
-  console.log(temp);
+  console.log(this.src);
+  window.open(this.src, 'myImg', 'resizable=yes, width=500', 'heigh=500');
+}
+
+// other version - onClick
+
+for (let i = 0; i < imgList.length; i++) {
+  console.log(imgList[i]);
+  const el = imgList[i];
+  el.onclick = resizeImg;
 }
