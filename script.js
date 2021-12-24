@@ -1,23 +1,18 @@
 // '(use strict';
 
-// Event listeners Challenge 2 - add items
-const listItemEl = document.querySelector('ul');
-console.log(listItemEl);
-
-const inputEl = document.querySelector('input');
-console.log(inputEl);
+// Event listeners Challenge 3 - change background color
 
 const btn = document.querySelector('button');
 console.log(btn);
 
-const addListItem = () => {
-  console.log(inputEl.value);
-  if (inputEl.value.length > 3) {
-    const listEl = document.createElement('li');
-    listEl.textContent = inputEl.value;
-    console.log(listEl);
-    listItemEl.appendChild(listEl);
-  }
+const randomNumber = (num) => Math.floor(Math.random() * (num + 1));
+const randomColor = () => {};
+
+const changeColor = () => {
+  const temp = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(
+    255
+  )})`;
+  document.body.style.backgroundColor = temp;
 };
 
-btn.addEventListener('click', addListItem);
+btn.addEventListener('click', changeColor);
