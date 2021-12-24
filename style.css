@@ -19,10 +19,12 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
-  color: rgb(21, 201, 102);
+  /* color: rgb(21, 201, 102); */
+  accent-color: none;
 }
 
 .red {
-  color: red;
+  color: red !important;
   font-size: 24px;
+  width: 150px;
 }
