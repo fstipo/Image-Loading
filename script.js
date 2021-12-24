@@ -1,14 +1,13 @@
 // '(use strict';
 
-// Event listeners Challenge 3 - change background color
+// Event object
 
 const btn = document.querySelector('button');
-console.log(btn);
+const spanList = document.querySelectorAll('span');
 
 const randomNumber = (num) => Math.floor(Math.random() * (num + 1));
-const randomColor = () => {};
 
-const changeColor = () => {
+const changeColor = (e) => {
   const temp = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(
     255
   )})`;
@@ -16,3 +15,12 @@ const changeColor = () => {
 };
 
 btn.addEventListener('click', changeColor);
+
+spanList.forEach((el) => {
+  el.addEventListener('click', (item) => {
+    const temp = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(
+      255
+    )})`;
+    el.style.backgroundColor = temp;
+  });
+});
