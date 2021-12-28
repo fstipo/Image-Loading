@@ -16,6 +16,8 @@ listItems.forEach((el) => {
       span.addEventListener('click', () => {
         el.parentNode.removeChild(el);
       });
+    } else {
+      el.getElementsByTagName('span')[0].remove();
     }
   });
 });
