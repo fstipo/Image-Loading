@@ -13,9 +13,8 @@ body {
   height: 100vh;
 }
 
-span {
-  display: block;
-  padding: 15px;
-  border: 2px solid black;
-  width: 500px;
+.red {
+  color: red;
+  background-color: #434343;
+  text-decoration: line-through;
 }
