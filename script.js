@@ -1,30 +1,21 @@
 // '(use strict';
 
-// Event object
+// add remove list item
 
-const btn = document.querySelector('button');
-const spanList = document.querySelectorAll('span');
+const mainListEl = document.querySelector('ul');
+const listItems = document.querySelectorAll('li');
+const inputEl = document.querySelector('input');
 
-const randomNumber = (num) => Math.floor(Math.random() * (num + 1));
-
-const changeColor = (e) => {
-  const temp = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(
-    255
-  )})`;
-  document.body.style.backgroundColor = temp;
-};
-
-btn.addEventListener('click', changeColor);
-
-spanList.forEach((el) => {
-  el.addEventListener('click', (item) => {
-    const temp = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(
-      255
-    )})`;
-    el.style.backgroundColor = temp;
-    el.textContent = `color: ${temp}`;
-    el.style['text-align'] = 'center';
-    el.style.fontWeight = 'bold';
-    el.style.color = 'white';
+listItems.forEach((el) => {
+  el.addEventListener('click', () => {
+    let red = el.classList.toggle('red');
+    if (red) {
+      let span = document.createElement('span');
+      span.textContent = ' X ';
+      el.appendChild(span);
+      span.addEventListener('click', () => {
+        el.parentNode.removeChild(el);
+      });
+    }
   });
 });
