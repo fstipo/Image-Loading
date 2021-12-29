@@ -1,14 +1,23 @@
 // '(use strict';
 
-// Mouse events
+// Add a list item
 
+const mainList = document.querySelector('ul');
 const listEl = document.querySelectorAll('li');
+const inputEl = document.querySelector('input');
 
-for (let i = 0; i < listEl.length; i++) {
-  listEl[i].addEventListener('mouseover', function () {
-    this.classList.add('red');
+listEl.forEach((el) => {
+  el.addEventListener('click', () => {
+    let red = el.classList.toggle('red');
+    if (red) {
+      let span = document.createElement('span');
+      span.textContent = ' X ';
+      el.appendChild(span);
+      span.addEventListener('click', () => {
+        el.parentNode.removeChild(el);
+      });
+    } else {
+      el.getElementsByTagName('span')[0].remove();
+    }
   });
-  listEl[i].addEventListener('mouseout', function () {
-    this.classList.remove('red');
-  });
-}
+});
