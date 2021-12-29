@@ -1,12 +1,14 @@
 // '(use strict';
 
-// Key press events
+// Mouse events
 
-document.addEventListener('keyup', onKeyUp);
+const listEl = document.querySelectorAll('li');
 
-function onKeyUp(e) {
-  let temp = `key: ${e.key}, keyCode: ${e.keyCode}`;
-  const divEl = document.createElement('div');
-  divEl.textContent = temp;
-  document.body.appendChild(divEl);
+for (let i = 0; i < listEl.length; i++) {
+  listEl[i].addEventListener('mouseover', function () {
+    this.classList.add('red');
+  });
+  listEl[i].addEventListener('mouseout', function () {
+    this.classList.remove('red');
+  });
 }
