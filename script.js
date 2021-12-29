@@ -1,23 +1,12 @@
 // '(use strict';
 
-// add remove list item
+// Key press events
 
-const mainListEl = document.querySelector('ul');
-const listItems = document.querySelectorAll('li');
-const inputEl = document.querySelector('input');
+document.addEventListener('keyup', onKeyUp);
 
-listItems.forEach((el) => {
-  el.addEventListener('click', () => {
-    let red = el.classList.toggle('red');
-    if (red) {
-      let span = document.createElement('span');
-      span.textContent = ' X ';
-      el.appendChild(span);
-      span.addEventListener('click', () => {
-        el.parentNode.removeChild(el);
-      });
-    } else {
-      el.getElementsByTagName('span')[0].remove();
-    }
-  });
-});
+function onKeyUp(e) {
+  let temp = `key: ${e.key}, keyCode: ${e.keyCode}`;
+  const divEl = document.createElement('div');
+  divEl.textContent = temp;
+  document.body.appendChild(divEl);
+}
