@@ -14,7 +14,7 @@ body {
   height: 100vh;
 }
 
-.bg {
+.bg-img {
   background-color: black;
   background: center url('./assets/pic1.jpg');
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
   filter: blur(70px);
 }
 
-.loading-txt {
+.countUp {
   font-size: 50px;
   color: #fff;
 }
