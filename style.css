@@ -14,9 +14,9 @@ body {
   height: 100vh;
 }
 
-.bg-img {
+.bg {
   background-color: black;
-  background: center url('./assets/pic1.jpg');
+  background: center url('https://picsum.photos/1000');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -28,7 +28,7 @@ body {
   filter: blur(70px);
 }
 
-.countUp {
+.load-text {
   font-size: 50px;
   color: #fff;
 }
